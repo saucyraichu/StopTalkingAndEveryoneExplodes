@@ -33,3 +33,11 @@ public class FXMLDocumentController implements Initializable {
     }    
     
 }
+
+/* Label label1 = new Label("Name:");
+TextField textField = new TextField ();
+HBox hb = new HBox();
+hb.getChildren().addAll(label1, textField);
+hb.setSpacing(10); */
+
+//fxid is "enterNumber"
