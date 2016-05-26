@@ -30,7 +30,7 @@ public class FXMLDocumentController implements Initializable {
         Group root = new Group();
         Scene scene = new Scene(root, 260, 80);
         stage.setScene(scene);
-        stage.setTitle("Password Field Sample");
+        stage.setTitle("Defuse this");
 
         VBox vb = new VBox();
         vb.setPadding(new Insets(10, 0, 0, 10));
@@ -39,9 +39,8 @@ public class FXMLDocumentController implements Initializable {
         hb.setSpacing(10);
         hb.setAlignment(Pos.CENTER_LEFT);
 
-        Label label = new Label("Password");
-        final PasswordField pb = new PasswordField();           
-        Label label1 = new Label("Name:");
+        Label label = new Label("keycode");
+        //final PasswordField pb = new PasswordField();
         TextField enterNumber = new TextField ();
         enterNumber.setOnKeyPressed(new EventHandler <KeyEvent>(){
             /* public void handle(KeyEvent e){
