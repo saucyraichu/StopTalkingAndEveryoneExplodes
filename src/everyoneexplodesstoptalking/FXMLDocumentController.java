@@ -14,27 +14,45 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 /**
  *
  * @author csstudent
  */
 public class FXMLDocumentController implements Initializable {
-    
-    @FXML
-    //private Label label;
-    Label label1 = new Label("Name:");
-    TextField enterNumber = new TextField ();
-    field.setOnKeyPressed(new EventHandler <KeyEvent>(){
-        
-    }
-    
-    @Override
-         public void handle(KeyEvent e){
-            if(e.getCode() -- KeyCode.ENTER) {
-                //code for 
+    public void start(Stage stage){
+        //private Label label;
+         Group root = new Group();
+        Scene scene = new Scene(root, 260, 80);
+        stage.setScene(scene);
+        stage.setTitle("Password Field Sample");
+
+        VBox vb = new VBox();
+        vb.setPadding(new Insets(10, 0, 0, 10));
+        vb.setSpacing(10);
+        HBox hb = new HBox();
+        hb.setSpacing(10);
+        hb.setAlignment(Pos.CENTER_LEFT);
+
+        Label label = new Label("Password");
+        final PasswordField pb = new PasswordField();           
+        Label label1 = new Label("Name:");
+        TextField enterNumber = new TextField ();
+        enterNumber.setOnKeyPressed(new EventHandler <KeyEvent>(){
+            /* public void handle(KeyEvent e){
+                if(e.getCode() -- KeyCode.ENTER) {
+                    //compare the textfield with the answer field.getText 
             }
-        }
+        } */
+    }
+            }
+   
+    
+ 
+         
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
