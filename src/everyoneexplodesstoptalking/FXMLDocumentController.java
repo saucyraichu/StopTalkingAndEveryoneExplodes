@@ -17,15 +17,17 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.Group;
 
 /**
  *
  * @author csstudent
  */
 public class FXMLDocumentController implements Initializable {
+    @Override
     public void start(Stage stage){
         //private Label label;
-         Group root = new Group();
+        Group root = new Group();
         Scene scene = new Scene(root, 260, 80);
         stage.setScene(scene);
         stage.setTitle("Password Field Sample");
