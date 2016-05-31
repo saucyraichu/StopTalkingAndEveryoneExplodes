@@ -65,20 +65,9 @@ public class FXMLDocumentController implements Initializable {
     
  
          
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+
     
 
 //override handle keyevent e, e.getcode --keycode.enter
 //https://www.youtube.com/watch?v=R8Qx_UiG18I
 //fxid is "enterNumber" http://code.makery.ch/blog/javafx-8-event-handling-examples/
-}
-
