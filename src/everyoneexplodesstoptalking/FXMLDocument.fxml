@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="everyoneexplodesstoptalking.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="everyoneexplodesstoptalking.FXMLDocumentController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <TextField fx:id="enterNumber" layoutX="77.0" layoutY="87.0" onKeyTyped="#handleButtonAction" />
+      <TextField fx:id="enterNumber" layoutX="85.0" layoutY="160.0" onKeyTyped="#handleButtonAction" />
+      <TextArea fx:id="text" layoutX="88.0" layoutY="32.0" prefHeight="116.0" prefWidth="144.0" />
     </children>
 </AnchorPane>
