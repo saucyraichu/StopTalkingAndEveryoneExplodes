@@ -1,10 +1,16 @@
+package everyoneexplodesstoptalking;
+
 import java.util.*;
+
+
 /**
  * Write a description of class bomb_tile_numpad here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
+
+
 public class bomb_tile_numpad
 {
     private static String toDefuse;
@@ -72,6 +78,18 @@ public class bomb_tile_numpad
         //do this to make it an integer starting with zeroes if digits less than 4 Integer.parseInt(String.format("%04d", finalAnswer));
         //file that reads this will need to distinguish between things between commas
         //todefuse should read: "1 23 55 234 , * + - , 236" so there should be 4, 3, 1 = 8 items total
+    }
+    public String question(){
+        
+        String question = new String ("");
+        String[] firstTemp = getDefuse().split(","); //Split the string by commas
+        String[] tempInt = firstTemp[0].split(" "); //Take the first item in the array, split it by spaces
+        String[] tempChar = firstTemp[1].split(" ");//take the second item in the array, split it by spaces
+        int answer = Integer.parseInt(firstTemp[2]);
+        //Then put the array of ints and array of chars into string question formatted as a question
+        question = "What is " + tempInt[0] + " " + tempChar[0] + " " + tempInt[1] + " " + tempChar[1] + " " + tempInt[2] + " " + tempChar[2] + " " + tempInt[3] + "?"; 
+        //need to format strings into chars and ints
+        return question;
     }
 
 }
