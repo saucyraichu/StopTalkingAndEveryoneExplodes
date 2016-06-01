@@ -25,6 +25,8 @@ public class EveryoneExplodesStopTalking extends Application {
         
         stage.setScene(scene);
         stage.show();
+        
+        
     }
 
     /**
