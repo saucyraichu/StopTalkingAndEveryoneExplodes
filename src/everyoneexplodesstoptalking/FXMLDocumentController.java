@@ -24,13 +24,10 @@ import javafx.scene.Scene;
  * @author csstudent
  */
 public class FXMLDocumentController implements Initializable {
-    
-    @Override
-    public void start(Stage stage){
-        
 
-   
-        VBox root = new Vbox(5);
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {        
+        bomb_tile_numpad blah = new bomb_tile_numpad();
         
         Label label = new Label("label");
         TextArea text = new TextArea();
@@ -39,26 +36,9 @@ public class FXMLDocumentController implements Initializable {
         text.setWrapText(true);
         
         Button printText = new Button("Prompt Question");
-        printText.setOnAction(e -> print(text));
+        printText.setText(blah.question()); 
         
-        HBox buttonBox = new HBox(5, printText);
         
-        root.getChildren().addAll(label, text, buttonBox);
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Defuse this");
-        stage.show();
-        //final PasswordField pb = new PasswordField();
-        //TextField enterNumber = new TextField ();
-        //enterNumber.setOnKeyPressed(new EventHandler <KeyEvent>(){
-            /* public void handle(KeyEvent e){
-                if(e.getCode() -- KeyCode.ENTER) {
-                    //compare the textfield with the answer field.getText 
-            }
-        } */
-            
-            //private Label label;
-
         
     }
 }
