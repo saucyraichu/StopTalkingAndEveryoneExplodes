@@ -25,6 +25,11 @@ import javafx.scene.Scene;
  */
 public class FXMLDocumentController implements Initializable {
 
+    
+    @FXML
+    
+    private Integer secondsLeft = 60;
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {        
         bomb_tile_numpad blah = new bomb_tile_numpad();
@@ -40,6 +45,19 @@ public class FXMLDocumentController implements Initializable {
         
         
         
+    }
+    
+      @Override
+    /* public void initialize(URL url, ResourceBundle rb) {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), this)); 
+        timeline.setCycleCount(25);
+        timeline.play();
+    }    */
+    
+    @Override
+    public void handle(ActionEvent event){
+        secondsLeft--;
+        label.setText(secondsLeft.toString());
     }
 }
     
