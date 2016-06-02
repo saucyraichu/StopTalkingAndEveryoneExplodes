@@ -6,7 +6,10 @@
 package everyoneexplodesstoptalking;
 
 import java.net.URL;
+import java.time.Duration;
 import java.util.ResourceBundle;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,6 +21,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.Scene;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.util.Duration.*;
 
 /**
  *
@@ -44,14 +57,17 @@ public class FXMLDocumentController implements Initializable {
         printText.setText(blah.question()); 
         
         
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), this)); 
+        timeline.setCycleCount(25);
+        timeline.play();
+        
+        
         
     }
     
       @Override
     /* public void initialize(URL url, ResourceBundle rb) {
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), this)); 
-        timeline.setCycleCount(25);
-        timeline.play();
+       
     }    */
     
     @Override
